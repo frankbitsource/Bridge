@@ -1,0 +1,111 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3 {
+    color: #333;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #0066cc;
+  }
+  
+  a:hover {
+    color: #0055a4;
+  }
+  
+  header {
+    background-color: #0066cc;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2em;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  section {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  input[type="text"], input[type="email"], textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100%;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #0066cc;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0055a4;
+  }
+  
+  /* Specific Page Styles */
+  .search-section {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .services-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .services-section li {
+    margin-bottom: 20px;
+  }
+  
+  .services-section li h3 {
+    color: #0066cc;
+  }
+  
+  .services-section li p {
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+  
