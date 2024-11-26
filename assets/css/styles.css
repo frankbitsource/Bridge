@@ -12,6 +12,7 @@ body {
     line-height: 1.6;
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -22,21 +23,37 @@ p {
     margin-bottom: 15px;
 }
 
+/* General layout styles */
+.container {
+    width: 100%;
+    max-width: 1200px;  /* Max width for larger screens */
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+section {
+    width: 100%;
+    padding: 5% 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 /* Header styles */
 header {
     background-color: #007bff; /* Blue background */
     color: white;
-    padding: 40px 20px;
     text-align: center;
+    padding: 8% 3%;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 5vw; /* Scales with viewport width */
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 2vw; /* Scales with viewport width */
 }
 
 /* Navigation Styles */
@@ -44,18 +61,21 @@ nav ul {
     display: flex;
     justify-content: center;
     background-color: #343a40;
-    padding: 10px 0;
+    padding: 15px 0;
     list-style: none;
+    flex-wrap: wrap; /* Items wrap on small screens */
+    margin: 0;
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0 2%;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: 2.5vw; /* Scales with viewport width */
 }
 
 nav ul li a:hover {
@@ -66,26 +86,24 @@ nav ul li a:hover {
 .hero {
     background-color: #007bff;
     color: white;
-    padding: 80px 20px;
+    padding: 10% 0;
     text-align: center;
 }
 
 .hero h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: 8vw; /* Scales with viewport width */
 }
 
 .hero p {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+    font-size: 3.5vw; /* Scales with viewport width */
 }
 
 .hero .btn {
     background-color: #28a745;
     color: white;
-    padding: 15px 30px;
+    padding: 2vw 6vw;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 3vw;
     font-weight: bold;
     border-radius: 5px;
 }
@@ -97,141 +115,169 @@ nav ul li a:hover {
 /* Footer styles */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 4% 3%;
     background-color: #343a40;
     color: white;
 }
 
-/* Container for general layout */
-.container {
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+footer p {
+    font-size: 1.5vw;
 }
 
-/* Responsive Layouts using Media Queries */
-@media (max-width: 1024px) {
+/* Responsive layout for sections */
+section .item {
+    width: 30%; /* Flexibly sized for larger screens */
+    margin: 2%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+section .item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Responsive layout using Media Queries */
+@media (max-width: 1200px) {
     header h1 {
-        font-size: 2rem;
+        font-size: 5vw;
     }
 
     header p {
-        font-size: 1rem;
+        font-size: 2vw;
     }
 
     .hero h2 {
-        font-size: 2.5rem;
+        font-size: 7vw;
     }
 
     .hero p {
-        font-size: 1.2rem;
+        font-size: 3vw;
     }
 
     .hero .btn {
-        padding: 12px 25px;
-        font-size: 1.1rem;
+        font-size: 2.5vw;
+        padding: 2.5vw 6vw;
+    }
+
+    footer p {
+        font-size: 2vw;
+    }
+
+    nav ul li {
+        margin: 1.5% 2%;
+    }
+}
+
+@media (max-width: 992px) {
+    nav ul li {
+        margin: 0 2vw;
+        font-size: 3.5vw;
+    }
+
+    header h1 {
+        font-size: 6vw;
+    }
+
+    header p {
+        font-size: 3vw;
+    }
+
+    .hero h2 {
+        font-size: 9vw;
+    }
+
+    .hero p {
+        font-size: 4.5vw;
+    }
+
+    .hero .btn {
+        font-size: 4vw;
+        padding: 4vw 7vw;
+    }
+
+    footer p {
+        font-size: 2.5vw;
     }
 }
 
 @media (max-width: 768px) {
-    /* Adjust Navigation for tablets */
-    nav ul {
-        flex-direction: column;
-        padding: 20px 0;
-    }
-
-    nav ul li {
-        margin-bottom: 10px;
-    }
-
     header h1 {
-        font-size: 1.8rem;
+        font-size: 8vw;
     }
 
     header p {
-        font-size: 1rem;
-    }
-
-    .hero {
-        padding: 60px 20px;
+        font-size: 4.5vw;
     }
 
     .hero h2 {
-        font-size: 2.2rem;
+        font-size: 10vw;
     }
 
     .hero p {
-        font-size: 1.1rem;
+        font-size: 5vw;
     }
 
     .hero .btn {
-        padding: 10px 20px;
-        font-size: 1rem;
+        font-size: 5vw;
+        padding: 5vw 8vw;
     }
 
-    footer {
-        font-size: 0.9rem;
-        padding: 15px;
+    footer p {
+        font-size: 3vw;
+    }
+
+    nav ul li {
+        margin: 2vw 0;
+        font-size: 4.5vw;
+    }
+
+    section .item {
+        width: 100%; /* Stacks items for smaller screens */
+        margin: 2vw 0;
     }
 }
 
 @media (max-width: 480px) {
-    /* Adjust for small mobile screens */
-    header {
-        padding: 20px 10px;
-    }
-
     header h1 {
-        font-size: 1.5rem;
+        font-size: 10vw;
     }
 
     header p {
-        font-size: 1rem;
-    }
-
-    .hero {
-        padding: 50px 10px;
+        font-size: 5.5vw;
     }
 
     .hero h2 {
-        font-size: 1.8rem;
+        font-size: 12vw;
     }
 
     .hero p {
-        font-size: 1rem;
+        font-size: 6vw;
     }
 
     .hero .btn {
-        padding: 8px 16px;
-        font-size: 0.9rem;
+        font-size: 6vw;
+        padding: 6vw 12vw;
     }
 
-    footer {
-        font-size: 0.8rem;
-        padding: 12px;
-    }
-
-    .container {
-        width: 90%;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
+    footer p {
+        font-size: 3.5vw;
     }
 
     nav ul li {
-        margin: 5px 0;
+        margin: 3vw 0;
+        font-size: 5vw;
+    }
+
+    section .item {
+        width: 100%; /* Stacks items for mobile */
+        margin: 2.5vw 0;
+    }
+
+    .container {
+        width: 95%; /* Ensure padding on the sides */
     }
 }
-
-/* Ensure that buttons are large enough on mobile */
-button, .btn {
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-}
-
